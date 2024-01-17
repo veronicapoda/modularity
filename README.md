@@ -15,13 +15,9 @@ Our scripts use the following methods:
 
 ## Synthetic models for modular hypergraphs
 We generated modular hypergraphs where ground truth clusters are known through the 3 following models:
-  * HSBM: this model proposed in [6] relies on R package [hyperSBM](https://github.com/LB1304/HyperSBM) 
-  * DCHSBM-like: this model proposed in [2] relies on the project [Hypermodularity](https://github.com/nveldt/HyperModularity.jl)
-  * h-ABCD: this model proposed in [7] relies on [ABCDHypergraphGenerator](https://github.com/bkamins/ABCDHypergraphGenerator.jl) 
-
-Parameter choices for the various scenarios
-  * 
-
+  * HSBM: this model proposed in [6] relies on R package [hyperSBM](https://github.com/LB1304/HyperSBM). Under this model, we generated scenarios A and C (see file Scenarios_HyperSBM.R)  
+  * DCHSBM-like: this model proposed in [2] relies on the project [Hypermodularity](https://github.com/nveldt/HyperModularity.jl). Under this model, we generated scenarios A, B, D, E and F (see Scenarios_DCHSBM-like.jl file) 
+  * h-ABCD: this model proposed in [7] relies on [ABCDHypergraphGenerator](https://github.com/bkamins/ABCDHypergraphGenerator.jl). Under this model, we generated scenarios A, and Z (see Scenarios_DCHSBM-like.jl file)  
 
 
 
