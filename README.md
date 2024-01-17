@@ -17,7 +17,17 @@ Our scripts use the following methods:
 We generated modular hypergraphs where ground truth clusters are known through the 3 following models:
   * HSBM: this model proposed in [6] relies on R package [hyperSBM](https://github.com/LB1304/HyperSBM). Under this model, we generated scenarios A and C (see file Scenarios_HyperSBM.R)  
   * DCHSBM-like: this model proposed in [2] relies on the project [Hypermodularity](https://github.com/nveldt/HyperModularity.jl). Under this model, we generated scenarios A, B, D, E and F (see Scenarios_DCHSBM-like.jl file) 
-  * h-ABCD: this model proposed in [7] relies on [ABCDHypergraphGenerator](https://github.com/bkamins/ABCDHypergraphGenerator.jl). Under this model, we generated scenarios A, and Z (see Scenarios_DCHSBM-like.jl file)  
+  * h-ABCD: this model proposed in [7] relies on [ABCDHypergraphGenerator](https://github.com/bkamins/ABCDHypergraphGenerator.jl). Under this model, we generated scenarios A, and Z.
+      - Scenarios A use the following command (changing the value of sample size n, the folder name scenA1, repetition number rep1 and the file same_size_50.txt	that contains the sizes of the cluster depending on the total sample size n)
+```
+julia --project abcdh.jl -n 50 -d 2.07,1,32 -c same_size_50.txt	-x 0.37 -q 0.0,0.66,0.34 -w :strict -s "27$i" 		-o "hABCD/scenA1/rep1"
+```
+and 
+      - Scenarios Z use the following command (changing the value of sample size n, the folder name scenZ1 and repetition number rep1)
+```
+julia --project abcdh.jl -n 50 -d 2.5,1,10 -c 1.5,10,80		-x 0.5 -q 0.0,0.6,0.4 -w :linear 	-o "hABCD/scenZ1/rep1"
+```
+  
 
 
 
