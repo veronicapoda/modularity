@@ -5,13 +5,32 @@
 
 Contains the scripts to perform the experiments from [1] on testing and comparing modularity-based approaches for nodes clustering in hypergraphs.
 
+## Requirements 
+To run those scripts and perform our experiments, you will need 
+ * R and the package [`hyperSBM`](https://github.com/LB1304/HyperSBM)
+ * Python and the libraries  [`hypernetx`](https://pnnl.github.io/HyperNetX/index.html), [`igraph`](https://igraph.org/python/tutorial/0.9.8/install.html)
+ * Julia and the libraries [`Clustering`](https://juliastats.org/Clustering.jl/stable/), [`SimpleHypergraphs`](https://github.com/pszufe/SimpleHypergraphs.jl)    
 
 ## Methods
 Our scripts use the following methods: 
- * AON-HMLL: This is the method from [2], whose implementation can be found at the project [Hypermodularity](https://github.com/nveldt/HyperModularity.jl)
- * CNM-like: This is the method from [3], whose implementation can be found at the project [CNM-like](https://gist.github.com/pszufe)
- * IRMM: This is the method from [4], whose implementation can be found at the [HyperNetx project](https://pnnl.github.io/HyperNetX/index.html)
- * LSR: This is the method from [5], whose implementation can also be found at the [HyperNetx project](https://pnnl.github.io/HyperNetX/index.html)
+ * AON-HMLL: This is the method from [2], whose implementation can be found at the project [Hypermodularity](https://github.com/nveldt/HyperModularity.jl). To run the script, simply use a command like
+```
+julia AON_HMLL_script.jl -m "HyperSBM/" -s "scenA1/" -n 25
+```
+
+ * CNM-like: This is the method from [3], whose implementation can be found at the project [SimpleHypergraphs](https://gist.github.com/pszufe). To run the script, simply use a command like
+```
+julia CNM_like_script.jl -m "DCHSBM/" -s "scenA1/" -n 25
+```
+
+ * IRMM: This is the method from [4], whose implementation can be found at the [HyperNetx project](https://pnnl.github.io/HyperNetX/index.html). To run the script, simply use a command like
+```
+python IRMM_script.py -m "HyperSBM/" -s "scenA2/" -n 25
+```
+ * LSR: This is the method from [5], whose implementation can also be found at the [HyperNetx project](https://pnnl.github.io/HyperNetX/index.html). To run the script, simply use a command like
+```
+python LSR_script.py -m "HyperSBM/" -s "scenA5/" -n 25
+```
 
 ## Synthetic models for modular hypergraphs
 We generated modular hypergraphs where ground truth clusters are known through the 3 following models:
