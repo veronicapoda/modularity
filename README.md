@@ -54,7 +54,7 @@ python LSR_script.py -m "HyperSBM/" -s "scenA5/" -n 25
 
 
 ## References: 
- 1. Poda, V. and Matias, C. (2024). Comparison of modularity-based approaches for nodes clustering in hypergraphs. [ArXiV preprint](https://arxiv.org/abs/XXXXXX)
+ 1. Poda, V. and Matias, C. (2024). Comparison of modularity-based approaches for nodes clustering in hypergraphs. Submitted. [Preprint](https://hal.science/hal-04414337)
  2. Chodrow, P. S., N. Veldt, and A. R. Benson (2021). Generative hypergraph clustering: From blockmodels to modularity. Science Advances 7(28), eabh1303 [Journal link](https://www.science.org/doi/10.1126/sciadv.abh1303)
  3. Kamiński, B., V. Poulin, P. Prałat, P. Szufel, and F. Théberge (2019a). Clustering via hypergraph modularity. PLoS ONE 14(11), e0224307. [Journal link](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0224307).
  4. Kumar, T., S. Vaidyanathan, H. Ananthapadmanabhan, S. Parthasarathy, and B. Ravindran (2020). Hypergraph clustering by iteratively reweighted modularity maximization. Appl. Netw. Sci. 5(1), 52. [Journal link](https://appliednetsci.springeropen.com/articles/10.1007/s41109-020-00300-3)
