@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/744470608.svg)](https://zenodo.org/doi/10.5281/zenodo.10816978)
+
 <h1 align="center">Modularity-based approaches for nodes clustering in hypergraphs</h1>
 <p align="center"> <span style="font-size: 14px;"><em><strong>Veronica Poda &middot; Catherine Matias</strong></em></span> </p>
 <br>
