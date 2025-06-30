@@ -1,0 +1,67 @@
+#####
+### Commands to run in the directory ABCDHypergraphGenerator.jl-main/utils 
+#####
+
+##### Scenario A - Fix K= 3 and equal cluster sizes 
+
+mkdir ../../../Modularity_experiments/hABCD/scenA1/	
+filename="../../../Modularity_experiments/hABCD/scenA1/same_size_50.txt"
+touch "$filename"	
+echo -e "16\n17\n17" > "$filename"	
+mkdir ../../../Modularity_experiments/hABCD/scenA2/	
+filename="../../../Modularity_experiments/hABCD/scenA2/same_size_100.txt"
+touch "$filename"	
+echo -e "33\n33\n34" > "$filename"	
+mkdir ../../../Modularity_experiments/hABCD/scenA3/	
+filename="../../../Modularity_experiments/hABCD/scenA3/same_size_150.txt"
+touch "$filename"	
+echo -e "50\n50\n50" > "$filename"	
+mkdir ../../../Modularity_experiments/hABCD/scenA4/	
+filename="../../../Modularity_experiments/hABCD/scenA4/same_size_200.txt"
+touch "$filename"	
+echo -e "66\n67\n67" > "$filename"	
+mkdir ../../../Modularity_experiments/hABCD/scenA5/	
+filename="../../../Modularity_experiments/hABCD/scenA5/same_size_500.txt"
+touch "$filename"	
+echo -e "166\n167\n167" > "$filename"	
+mkdir ../../../Modularity_experiments/hABCD/scenA6/	
+filename="../../../Modularity_experiments/hABCD/scenA6/same_size_1000.txt"
+touch "$filename"	
+echo -e "333\n333\n334" > "$filename"	
+
+
+n_values=(50 100 150 200 500 1000)
+scen=0
+
+for n in "${n_values[@]}"; do
+    ((scen++))
+    filename="../../../Modularity_experiments/hABCD/scenA${scen}/same_size_${n}.txt"
+
+    for i in $(seq 1 25); do \
+	julia --project abcdh.jl -n "$n" -d 2.07,1,32 -c "$filename" \
+		-x 0.37 -q 0.0,0.66,0.34 -w :strict -s "27$i" \
+		-o "../../../Modularity_experiments/hABCD/scenA${scen}/rep${i}"
+    done
+done
+
+
+
+############################################################################
+##### Default scenario Z
+
+n_values=(100 150 200 500 1000)
+scen=0
+
+for n in "${n_values[@]}"; do
+    ((scen++))
+    mkdir ../../../Modularity_experiments/hABCD/scenC${scen}/
+
+    for i in $(seq 1 25); do \
+    	julia --project abcdh.jl -n "$n" -d 2.5,1,10 -c 1.5,10,80 \
+		-x 0.5 -q 0.0,0.6,0.4 -w :linear -s "27$i" \
+			-o "../../../Modularity_experiments/hABCD/scenZ${scen}/rep${i}"    done
+done
+
+
+
+
